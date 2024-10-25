@@ -13,11 +13,11 @@ export default function SearchEngineResponses() {
         isLoadingHttpRequest,
     } = useContext(UrlSearchEngineContext)
 
-    if (isLoadingHttpRequest) return <Loader />
-
     const processedResponse = useMemo(()=>{
         return customParseObject(data);
     },[data])
+
+    if (isLoadingHttpRequest) return <Loader />
 
     return (
         <Row>
