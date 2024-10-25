@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import useRequester from "@/http/use-requester"
 
-export default function UseSearchEngineQueries() {
+export default function useSearchEngineQueries() {
 
     const { 
         data, 

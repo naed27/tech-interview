@@ -1,6 +1,6 @@
 import { Dispatch } from "react";
-import UseSearchEnginePayload from "./use-search-engine-payload"
-import UseSearchEngineQueries from "./use-search-engine-queries"
+import useSearchEnginePayload from "./use-search-engine-payload"
+import useSearchEngineQueries from "./use-search-engine-queries"
 
 export type LOGIC_TYPE = {
     payload?: any
@@ -14,10 +14,10 @@ export type LOGIC_TYPE = {
     fetchData?: ({ url, options }: any) => Promise<void>
 }
 
-export default function UseSearchEngineLogic() {
+export default function useSearchEngineLogic() {
 
-    const payload = UseSearchEnginePayload()
-    const queries = UseSearchEngineQueries()
+    const payload = useSearchEnginePayload()
+    const queries = useSearchEngineQueries()
 
     return {
         ...payload,
