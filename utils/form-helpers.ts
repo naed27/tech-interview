@@ -1,11 +1,11 @@
 type StateSetter<T> = React.Dispatch<React.SetStateAction<T>>;
 
 export const createPayloadChanger = <T>(stateSetter: StateSetter<T>) => {
-    const changePayload = (accessor: string, input: unknown) => {
+    const changePayload = (accessor: string, input: any) => {
         stateSetter((current: T) => {
             const keys = accessor?.split('.');
             
-            const updateNestedObject = (obj: any, keys: string[], value: unknown): any => {
+            const updateNestedObject = (obj: any, keys: string[], value: any): any => {
                 const key = keys[0];
                 if (keys.length === 1) {
                     return { ...obj, [key]: value };

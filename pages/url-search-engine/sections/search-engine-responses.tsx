@@ -14,7 +14,8 @@ export default function SearchEngineResponses() {
     } = useContext(UrlSearchEngineContext)
 
     const processedResponse = useMemo(()=>{
-        return customParseObject(data);
+        if(!data) return {}
+        return customParseObject(data)
     },[data])
 
     if (isLoadingHttpRequest) return <Loader />
@@ -35,7 +36,7 @@ export default function SearchEngineResponses() {
                 maxHeight="80svh"
                 object={processedResponse}
                 labelPosition="center-top"
-                label='Processed URL Response' />
+                label='Processed URL Response'/>
             </Col>
 
         </Row>

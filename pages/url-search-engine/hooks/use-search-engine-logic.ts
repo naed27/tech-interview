@@ -5,9 +5,9 @@ import UseSearchEngineQueries from "./use-search-engine-queries"
 export type LOGIC_TYPE = {
     payload?: any
     setPayload?: Dispatch<any>
-    changePayload?: (accessor: string, input: unknown) => void
+    changePayload?: (accessor: string, input: any) => void
     
-    data?: unknown
+    data?: any
     isLoading?: boolean
     error?: string | null
     isLoadingHttpRequest?: boolean
