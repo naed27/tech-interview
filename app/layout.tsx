@@ -3,15 +3,15 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 
 const geistSans = localFont({
+  weight: "100 900",
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
 })
 
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
   weight: "100 900",
+  variable: "--font-geist-mono",
+  src: "./fonts/GeistMonoVF.woff",
 })
 
 export const metadata: Metadata = {
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}:{
+  children?: React.ReactNode
+}={}) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
