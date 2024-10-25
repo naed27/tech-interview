@@ -1,6 +1,5 @@
-type StateSetter<T> = React.Dispatch<React.SetStateAction<T>>;
 
-export const createPayloadChanger = <T>(stateSetter: StateSetter<T>) => {
+export const createPayloadChanger = <T>(stateSetter: any) => {
     const changePayload = (accessor: string, input: any) => {
         stateSetter((current: T) => {
             const keys = accessor?.split('.');
