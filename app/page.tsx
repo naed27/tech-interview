@@ -1,7 +1,5 @@
-'use server'
-
 import UrlSearchEngine from "@/pages/url-search-engine/url-search-engine"
 
-export default async function Home  () {
+export default function Home() {
   return <UrlSearchEngine/>
 }

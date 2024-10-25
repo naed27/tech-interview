@@ -5,7 +5,7 @@ import useSearchEngineLogic from "./hooks/use-search-engine-logic"
 import SearchEngineResponses from "./sections/search-engine-responses"
 import SearchEngineSearchBox from "./sections/search-engine-search-box"
 
-export const UrlSearchEngineContext = createContext<any>({})
+export const UrlSearchEngineContext = createContext<any>(null)
 
 export default function UrlSearchEngine () {
 
