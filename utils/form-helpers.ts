@@ -1,5 +1,5 @@
 type StateSetter<T> = React.Dispatch<React.SetStateAction<T>>;
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const createPayloadChanger = <T>(stateSetter: StateSetter<T>) => {
     const changePayload = (accessor: string, input: any) => {
         stateSetter((current: T) => {
