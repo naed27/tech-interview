@@ -5,8 +5,8 @@ import Col from "@/components/ui/col";
 import { useContext, useMemo } from "react";
 import Loader from "@/components/ui/loader";
 import { customParseObject } from "@/utils/object-helpers";
-import { UrlSearchEngineContext } from "../url-search-engine";
 import ObjectDisplayer from "@/components/ui/object-displayer";
+import { UrlSearchEngineContext } from "../hooks/use-search-engine-logic";
 import AutoResizingTextArea from "@/components/ui/auto-resizing-text-area";
 
 export default function SearchEngineResponses() {

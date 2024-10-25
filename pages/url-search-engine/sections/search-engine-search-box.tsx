@@ -4,7 +4,7 @@ import { useContext } from "react"
 import Row from "@/components/ui/row"
 import BigButton from "@/components/ui/big-button"
 import TextField from "@/components/ui/text-field"
-import { UrlSearchEngineContext } from "../url-search-engine"
+import { UrlSearchEngineContext } from "../hooks/use-search-engine-logic"
 
 export default function SearchEngineSearchBox() {
 

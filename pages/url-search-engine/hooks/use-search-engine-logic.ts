@@ -1,4 +1,4 @@
-import { Dispatch } from "react";
+import { Dispatch, createContext } from "react";
 import UseSearchEnginePayload from "./use-search-engine-payload"
 import UseSearchEngineQueries from "./use-search-engine-queries"
 
@@ -13,6 +13,8 @@ export type LOGIC_TYPE = {
     isLoadingHttpRequest?: boolean
     fetchData?: ({ url, options }: any) => Promise<void>
 }
+
+export const UrlSearchEngineContext = createContext<LOGIC_TYPE>({})
 
 export default function useSearchEngineLogic() {
 
