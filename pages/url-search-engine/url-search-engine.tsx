@@ -6,8 +6,6 @@ import SearchEngineSearchBox from "./sections/search-engine-search-box"
 
 export default function UrlSearchEngine () {
 
-    return null
-
     const contextValue = useSearchEngineLogic()
     
     return (

@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from "react"
 import { createPayloadChanger } from "@/utils/form-helpers"
 

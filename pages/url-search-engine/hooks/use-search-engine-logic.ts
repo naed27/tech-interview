@@ -1,3 +1,5 @@
+'use client'
+
 import useSearchEnginePayload from "./use-search-engine-payload"
 import useSearchEngineQueries from "./use-search-engine-queries"
 
