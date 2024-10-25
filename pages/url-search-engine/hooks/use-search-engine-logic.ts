@@ -1,3 +1,5 @@
+'use client';
+
 import { Dispatch, createContext } from "react";
 import UseSearchEnginePayload from "./use-search-engine-payload"
 import UseSearchEngineQueries from "./use-search-engine-queries"

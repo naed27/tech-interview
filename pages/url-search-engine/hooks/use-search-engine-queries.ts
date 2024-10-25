@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemo } from "react"
 import useRequester from "@/http/use-requester"
 
