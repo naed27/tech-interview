@@ -8,12 +8,12 @@ import { customParseObject } from "@/utils/object-helpers";
 import ObjectDisplayer from "@/components/ui/object-displayer";
 import AutoResizingTextArea from "@/components/ui/auto-resizing-text-area";
 
-export default function SearchEngineResponses(props: any) {
+export default function SearchEngineResponses({ contextValue }: any) {
 
     const {
         data,
         isLoadingHttpRequest,
-    } = props ?? {}
+    } = contextValue ?? {}
 
     const processedResponse = useMemo(()=>{
         if(!data) return {}

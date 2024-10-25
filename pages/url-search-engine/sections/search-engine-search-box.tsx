@@ -4,13 +4,13 @@ import Row from "@/components/ui/row"
 import BigButton from "@/components/ui/big-button"
 import TextField from "@/components/ui/text-field"
 
-export default function SearchEngineSearchBox(props: any) {
+export default function SearchEngineSearchBox({ contextValue }: any) {
 
     const {
         payload,
         fetchData,
         changePayload,
-    } = props ?? {}
+    } = contextValue ?? {}
 
     const handleFetchData = () => {
         fetchData?.({

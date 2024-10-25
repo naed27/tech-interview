@@ -10,8 +10,8 @@ export default function UrlSearchEngine () {
 
     return (
         <>
-            <SearchEngineSearchBox {...contextValue}/>
-            <SearchEngineResponses {...contextValue}/>
+            <SearchEngineSearchBox contextValue={contextValue}/>
+            <SearchEngineResponses contextValue={contextValue}/>
         </>
     )
 }
