@@ -1,3 +1,5 @@
+'use client'
+
 import Row from "@/components/ui/row";
 import Col from "@/components/ui/col";
 import { useContext, useMemo } from "react";

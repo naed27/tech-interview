@@ -1,7 +1,7 @@
 import { Dispatch } from "react";
 import UseSearchEnginePayload from "./use-search-engine-payload"
 import UseSearchEngineQueries from "./use-search-engine-queries"
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export type LOGIC_TYPE = {
     payload?: any
     setPayload?: Dispatch<any>

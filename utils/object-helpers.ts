@@ -27,7 +27,7 @@ const sortCharactersDescendingly = (str: string): string => {
     }).join('')
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 
 const processEntry = ([key, value]: [string, any]): [string, any] => {
     

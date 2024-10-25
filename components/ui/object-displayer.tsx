@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 interface CollapsibleItemProps {
     value: any
     label: string
