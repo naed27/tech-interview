@@ -1,16 +1,18 @@
 'use client'
 
+import { useContext } from "react"
 import Row from "@/components/ui/row"
 import BigButton from "@/components/ui/big-button"
 import TextField from "@/components/ui/text-field"
+import { UrlSearchEngineContext } from "../url-search-engine"
 
-export default function SearchEngineSearchBox({ contextValue }: any) {
+export default function SearchEngineSearchBox() {
 
     const {
         payload,
         fetchData,
         changePayload,
-    } = contextValue ?? {}
+    } = useContext(UrlSearchEngineContext)
 
     const handleFetchData = () => {
         fetchData?.({

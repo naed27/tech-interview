@@ -1,18 +1,21 @@
 'use client'
 
-import useSearchEngineLogic from "./hooks/use-search-engine-logic"
+import { createContext } from "react"
 import SearchEngineResponses from "./sections/search-engine-responses"
 import SearchEngineSearchBox from "./sections/search-engine-search-box"
+import useSearchEngineLogic, { LOGIC_TYPE } from "./hooks/use-search-engine-logic"
+
+export const UrlSearchEngineContext = createContext<LOGIC_TYPE>({})
 
 export default function UrlSearchEngine () {
 
     const contextValue = useSearchEngineLogic()
-    
+
     return (
-        <>
-            <SearchEngineSearchBox contextValue={contextValue}/>
-            <SearchEngineResponses contextValue={contextValue}/>
-        </>
+        <UrlSearchEngineContext.Provider value={contextValue}>
+            <SearchEngineSearchBox/>
+            <SearchEngineResponses/>
+        </UrlSearchEngineContext.Provider>
     )
 }
 
