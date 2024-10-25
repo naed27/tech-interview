@@ -2,6 +2,6 @@
 
 import UrlSearchEngine from "@/pages/url-search-engine/url-search-engine"
 
-export default function Home() {
+export default async function Home  () {
   return <UrlSearchEngine/>
 }
