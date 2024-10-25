@@ -1,7 +1,5 @@
+import UrlSearchEngine from "@/pages/url-search-engine/url-search-engine";
+
 export default function Home() {
-  return (
-    <div className="">
-      test
-    </div>
-  );
+  return <UrlSearchEngine/>
 }

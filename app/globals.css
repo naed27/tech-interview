@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -18,4 +18,63 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Inputs */
+input,
+textarea,
+select {
+  @apply border rounded-md shadow-sm p-2; /* Add some default styles */
+  background: rgba(218, 218, 218, 0.2);
+  color: var(--foreground);
+  border: 1px solid rgba(23, 23, 23, 0.2);
+}
+
+/* Input Focus State */
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-none ring-2 ring-blue-500; /* Change ring color on focus */
+}
+
+/* Cards */
+.card {
+  @apply bg-white shadow-lg rounded-lg p-4;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid rgba(23, 23, 23, 0.1);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+  color: var(--foreground);
+}
+
+/* Text Elements */
+p, span, small {
+  color: var(--foreground);
+}
+
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Full height for centering */
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 60px; /* Loader size */
+  height: 60px; /* Loader size */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
