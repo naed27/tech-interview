@@ -1,19 +1,19 @@
 'use client'
 
+import { useMemo } from "react";
 import Row from "@/components/ui/row";
 import Col from "@/components/ui/col";
-import { useContext, useMemo } from "react";
 import Loader from "@/components/ui/loader";
 import { customParseObject } from "@/utils/object-helpers";
-import { UrlSearchEngineContext } from "../url-search-engine";
 import ObjectDisplayer from "@/components/ui/object-displayer";
 import AutoResizingTextArea from "@/components/ui/auto-resizing-text-area";
 
-export default function SearchEngineResponses() {
+export default function SearchEngineResponses(props: any) {
+
     const {
         data,
         isLoadingHttpRequest,
-    } = useContext(UrlSearchEngineContext)
+    } = props ?? {}
 
     const processedResponse = useMemo(()=>{
         if(!data) return {}
