@@ -1,8 +1,8 @@
 'use client';
 
 import { Dispatch, createContext } from "react";
-import useSearchEnginePayload from "./use-search-engine-payload"
-import useSearchEngineQueries from "./use-search-engine-queries"
+import useSearchEngineQueries from "./use-search-engine-queries";
+import useSearchEnginePayload from "./use-search-engine-payload";
 
 export type LOGIC_TYPE = {
     payload?: any
@@ -20,11 +20,8 @@ export const UrlSearchEngineContext = createContext<LOGIC_TYPE>({})
 
 export default function useSearchEngineLogic() {
 
-    const payload = useSearchEnginePayload()
+    // const payload = useSearchEnginePayload()
     const queries = useSearchEngineQueries()
 
-    return {
-        ...payload,
-        ...queries,
-    }
+    return {}
 }
