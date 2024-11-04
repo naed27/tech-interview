@@ -10,7 +10,7 @@ export default function UrlSearchEngine () {
     const contextValue = useSearchEngineLogic()
 
     return (
-        <UrlSearchEngineContext.Provider value={contextValue}>
+        <UrlSearchEngineContext.Provider value={{...contextValue}}>
             <SearchEngineSearchBox/>
             <SearchEngineResponses/>
         </UrlSearchEngineContext.Provider>
