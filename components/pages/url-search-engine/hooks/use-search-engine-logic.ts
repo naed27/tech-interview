@@ -1,8 +1,6 @@
-
-
 import { Dispatch, createContext } from "react";
-// import useSearchEngineQueries from "./use-search-engine-queries";
-// import useSearchEnginePayload from "./use-search-engine-payload";
+import useSearchEnginePayload from "./use-search-engine-payload";
+import useSearchEngineQueries from "./use-search-engine-queries";
 
 export type LOGIC_TYPE = {
     payload?: any
@@ -20,8 +18,11 @@ export const UrlSearchEngineContext = createContext<LOGIC_TYPE>({})
 
 export default function useSearchEngineLogic() {
 
-    // const payload = useSearchEnginePayload()
-    // const queries = useSearchEngineQueries()
+    const payload = useSearchEnginePayload()
+    const queries = useSearchEngineQueries()
 
-    return {}
+    return {
+        ...payload,
+        ...queries,
+    }
 }
